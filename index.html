@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>أوصلي</title>
+
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="logo">أوصلي <span>🚗</span></div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="hero-text">
+          <h1>في مشكلة في العربية؟</h1>
+        </div>
+
+        <div class="hero-icon">🚘</div>
+      </section>
+
+      <form id="requestForm">
+
+    <!-- بيانات السيارة -->
+    <section class="form-section">
+        <h2>🚗 بيانات السيارة</h2>
+        <h3>Chevrolet Cruze</h3>
+        <h3>وه ---- ٥٧٩٤</h3>
+    </section>
+
+    <!-- اختيار المشكلة -->
+    <section class="form-section">
+        <h2>⚠️ إيه المشكلة اللي حصلت؟</h2>
+
+        <p class="section-description">
+            اختار المشكلة اللي بتواجهك:
+        </p>
+
+        <div class="problems">
+
+            <label class="problem-card">
+                <input type="radio" name="problem"
+                    value="العربية قافلة عليا" required>
+                <span>🔒</span>
+                <strong>العربية قافلة عليا</strong>
+            </label>
+
+            <label class="problem-card">
+                <input type="radio" name="problem"
+                    value="نور العربية شغال">
+                <span>💡</span>
+                <strong>نور العربية شغال</strong>
+            </label>
+
+            <label class="problem-card">
+                <input type="radio" name="problem"
+                    value="السنتر لوك مفتوح">
+                <span>🚪</span>
+                <strong>السنتر لوك مفتوح</strong>
+            </label>
+
+            <label class="problem-card">
+                <input type="radio" name="problem"
+                    value="العربية اتخبطت">
+                <span>💥</span>
+                <strong>العربية اتخبطت</strong>
+            </label>
+
+            <label class="problem-card">
+                <input type="radio" name="problem"
+                    value="راكن مكاني">
+                <span>⚠️</span>
+                <strong>راكن مكاني</strong>
+            </label>
+
+            <label class="problem-card">
+                <input type="radio" name="problem"
+                    value="مشكلة أخرى">
+                <span>❓</span>
+                <strong>مشكلة أخرى</strong>
+            </label>
+
+        </div>
+    </section>
+
+    <!-- تفاصيل المشكلة -->
+    <section class="form-section">
+        <h2>📝 تفاصيل المشكلة</h2>
+
+        <div class="form-group">
+            <label for="description">
+                اشرح المشكلة بالتفصيل
+            </label>
+
+            <textarea
+                id="description"
+                rows="5"
+                maxlength="1000"
+                placeholder="اكتب تفاصيل المشكلة هنا..."
+            ></textarea>
+        </div>
+    </section>
+
+    <!-- رقم التواصل -->
+    <section class="form-section">
+        <h2>📞 رقم التواصل</h2>
+
+        <p class="section-description">
+            علشان صاحب العربية يقدر يتواصل معاك.
+        </p>
+
+        <div class="form-group">
+            <label for="phone">رقم تليفونك</label>
+
+            <input
+                type="tel"
+                id="phone"
+                inputmode="numeric"
+                autocomplete="tel"
+                maxlength="20"
+                placeholder="01012345678"
+            >
+        </div>
+    </section>
+
+    <!-- رفع الصور -->
+    <section class="form-section">
+        <h2>📷 صور المشكلة</h2>
+
+        <p class="section-description">
+            صوّر المشكلة دلوقتي أو اختار صور من المعرض (لحد 8 صور).
+        </p>
+
+        <div class="upload-options">
+
+            <label for="cameraInput" class="upload-area">
+                <span>📸</span>
+                <strong>تصوير الآن</strong>
+                <small>افتح الكاميرا</small>
+            </label>
+
+            <label for="images" class="upload-area">
+                <span>🖼️</span>
+                <strong>من المعرض</strong>
+                <small>اختار أكثر من صورة</small>
+            </label>
+
+        </div>
+
+        <!-- الكاميرا -->
+        <input
+            type="file"
+            id="cameraInput"
+            accept="image/*"
+            capture="environment"
+            hidden
+        >
+
+        <!-- المعرض -->
+        <input
+            type="file"
+            id="images"
+            accept="image/*"
+            multiple
+            hidden
+        >
+
+        <div id="imagePreview" class="image-preview"></div>
+    </section>
+
+    <!-- زر إرسال الطلب -->
+    <section class="form-section">
+        <button type="button" id="sendWhatsApp">
+            🚨 إرسال البلاغ
+        </button>
+    </section>
+
+</form>
+
+      <!-- رسالة النجاح -->
+      <section id="successSection" class="success-section hidden">
+        <div class="success-icon">✅</div>
+        <h2>تم إرسال البلاغ</h2>
+        <p>صاحب العربية هيتواصل معاك على رقمك في أقرب وقت.</p>
+        <button type="button" id="newReport" class="submit-btn">
+          إرسال بلاغ جديد
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <p>أوصلي © 2026  🚗</p>
+      <p style="font-size:12px; opacity:.7; margin-top:6px;">
+        الموقع بيسجل نوع الجهاز ووقت الزيارة.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

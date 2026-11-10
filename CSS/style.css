@@ -1,0 +1,447 @@
+
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    color: #172554;
+    line-height: 1.7;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+/* Navbar */
+
+.navbar {
+    background: #172554;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    font-size: 25px;
+}
+
+.navbar p {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+/* Main Container */
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 35px auto;
+}
+
+/* Hero */
+
+.hero {
+    background: linear-gradient(135deg, #172554, #2563eb);
+    color: white;
+    border-radius: 20px;
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.tag {
+    background: #ffffff25;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    margin: 15px 0 5px;
+    font-size: 30px;
+}
+
+.hero p {
+    color: #dbeafe;
+}
+
+.hero-icon {
+    font-size: 75px;
+}
+
+/* Form Sections */
+
+.form-section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #00000008;
+}
+
+.form-section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    color: #64748b;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Inputs */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px #2563eb15;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Problem Cards */
+
+.problems {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.problem-card {
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px 10px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.problem-card input {
+    display: none;
+}
+
+.problem-card span {
+    font-size: 30px;
+}
+
+.problem-card strong {
+    font-size: 14px;
+}
+
+.problem-card:has(input:checked) {
+    border-color: #2563eb;
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.problem-card:hover {
+    border-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* Upload Images */
+
+.upload-area {
+    border: 2px dashed #93c5fd;
+    background: #eff6ff;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.upload-area span {
+    font-size: 35px;
+}
+
+.upload-area small {
+    color: #64748b;
+}
+
+.image-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.preview-item {
+    position: relative;
+}
+
+.preview-item img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+}
+
+.remove-image {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border: none;
+    background: #dc2626;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Location */
+
+.location-btn {
+    border: none;
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.location-btn:hover {
+    background: #bfdbfe;
+}
+
+.location-status {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Submit */
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Success */
+
+.success-section {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 25px 0;
+    text-align: center;
+    box-shadow: 0 4px 15px #00000008;
+}
+
+.success-icon {
+    font-size: 55px;
+}
+
+.success-section h2 {
+    color: #15803d;
+    margin: 10px 0;
+}
+
+.success-section strong {
+    display: inline-block;
+    background: #dcfce7;
+    color: #166534;
+    padding: 8px 20px;
+    border-radius: 8px;
+    margin: 10px;
+    direction: ltr;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Saved Requests */
+
+.saved-section {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.saved-section h2 {
+    margin-bottom: 15px;
+}
+
+.request-card {
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.request-card h3 {
+    color: #2563eb;
+    margin-bottom: 5px;
+}
+
+.request-card p {
+    color: #475569;
+    font-size: 14px;
+}
+
+.request-status {
+    display: inline-block;
+    background: #fef3c7;
+    color: #92400e;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.empty-message {
+    color: #94a3b8;
+}
+
+/* Footer */
+
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+
+#sendWhatsApp {
+    width: 100%;
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* Upload options (camera + gallery) */
+
+.upload-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* Disabled send button */
+
+#sendWhatsApp:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+}
+#sendWhatsApp:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+}
+
+#sendWhatsApp i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 25px;
+    }
+
+    .hero h1 {
+        font-size: 23px;
+    }
+
+    .hero-icon {
+        font-size: 45px;
+    }
+
+    .problems {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section {
+        padding: 18px;
+    }
+
+}
